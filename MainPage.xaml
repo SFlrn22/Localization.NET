@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Localization.NET.MainPage">
+
+    <StackLayout>
+        <Label x:Name="LabelLatitude" 
+               FontSize="20"
+               Text="{Binding Latitude, StringFormat='Latitude: {0}'}"
+               TranslationX="50"
+               TranslationY="250"/>
+        <Label x:Name="LabelLongitude"
+               Text="{Binding Longitude, StringFormat='Longitude: {0}'}"
+               FontSize="20"
+               TranslationX="50"
+               TranslationY="300"/>
+        <Button
+                BackgroundColor="#7c58c9"
+                BorderColor="White"
+                BorderWidth="1"
+                Clicked="ButtonClicked"
+                Text="Get Weather"
+                TextColor="White"
+                TranslationY="500"/>
+    </StackLayout>
+
+</ContentPage>
