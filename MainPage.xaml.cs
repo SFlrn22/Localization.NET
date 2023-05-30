@@ -1,12 +1,11 @@
-﻿using Localization.NET.Models;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 
 namespace Localization.NET;
 public partial class MainPage : ContentPage
 {
-	public MainPage()
-	{
-		InitializeComponent();
+    public MainPage()
+    {
+        InitializeComponent();
     }
 
     private async void ButtonClicked(object sender, EventArgs e)
@@ -15,9 +14,8 @@ public partial class MainPage : ContentPage
         BindingContext = locationCoords;
     }
 
-
     private async Task<Models.Location> GetLocation()
-	{
+    {
         Models.Location coordinates = new Models.Location();
         try
         {
@@ -28,7 +26,9 @@ public partial class MainPage : ContentPage
             {
                 coordinates.Latitude = location.Latitude;
                 coordinates.Longitude = location.Longitude;
-            } else {
+            }
+            else
+            {
                 coordinates.Latitude = 0;
                 coordinates.Longitude = 0;
             }
